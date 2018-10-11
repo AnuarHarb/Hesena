@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color variables */
+  --primery-color: #233d4d;
+  --secondary-color: #768948;
+  --highlight-color: #b39c46;
+
+  --background-color: #e7e9e9;
+  --white-hesena: #fefffe;
+
+  /* Layout variables */
+  --header-height: 80px;
+  --basic-padding: 20px;
+  --section-padding: 40px;
+
+  /* Text variables */
+  --title-size: 30px;
+  --second-title-size: 23px;
+  --text-size: 16px;
+}
+
+body {
+  font-family: 'Lato', arial;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.header {
+  align-items: center;
+  background-color: var(--primery-color);
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  padding: 0 var(--basic-padding);
+}
+
+.header__list {
+  list-style: none;
+}
+
+.header__item {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.header__item a {
+  color: var(--white-hesena);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.header__item a:active {
+  color: var(--primery-color);
+}
+
+.header__menu {
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+}
+
+.header__menu img {
+  width: 100%;
+}
+
+.desktop {
+  display: none;
+}
+
+@media all and (min-width:450px) { /* Tableta para arriba */
+  .desktop {
+    display: block;
+  }
+
+  .header__menu {
+    display: none;
+  }
+}
